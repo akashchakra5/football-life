@@ -128,7 +128,7 @@ body {
 
 .match-button {
     width: 80%;
-    height: 20%;
+    height: 70px;
     font-size: 1.3rem;
     border: none;
     border-radius: 15px;
@@ -136,7 +136,7 @@ body {
 
 .group-button {
     width: 80%;
-    height: 20%;
+    height: 70px;
     font-size: 1.3rem;
     border: none;
     border-radius: 15px;
@@ -144,7 +144,7 @@ body {
 
 .blog-button {
     width: 80%;
-    height: 20%;
+    height: 70px;
     font-size: 1.3rem;
     border: none;
     border-radius: 15px;
@@ -294,6 +294,16 @@ body {
     .options {
         flex-direction: row;
         background-color: #ffff;
+    }
+
+    .match-button {
+        height: 70px;
+        background-image: -moz-linear-gradient(grey, white);
+    }
+
+    .group-button {
+        height: 70px;
+        background-color: grey;
     }
 
     .blog-button {
