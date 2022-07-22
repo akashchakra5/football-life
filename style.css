@@ -303,7 +303,8 @@ body {
 
     .group-button {
         height: 70px;
-        background-color: grey;
+        background-image: -moz-linear-gradient(grey, white);
+
     }
 
     .blog-button {
