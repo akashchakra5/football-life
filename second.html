@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:ital@1&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06899549f6.js" crossorigin="anonymous"></script>
+
+    <title>second page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .wreaper {
+            max-width: 90%;
+            margin: 0 auto;
+            height: 100vh;
+            display: grid;
+            column-gap: 20px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 2fr 4fr 3fr;
+            row-gap: 10%;
+
+        }
+
+        /* header start */
+
+        .header {
+            background-color: #ffffff;
+            grid-column: 1/-1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .banner {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            background-color: #161616;
+            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 0 7px 7px grey;
+
+        }
+
+        .card-info {
+            width: 60%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-left: 30px;
+            color: white;
+        }
+
+
+
+        .banner-title h1 {
+            font-weight: 800;
+            font-size: 2rem;
+        }
+
+        .great-header {
+            color: #5bccf6;
+        }
+
+        .live-button {
+            padding: 6px 12px;
+            background-color: #f7161a;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 15px;
+
+        }
+
+        .live-button a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .fa-greater-than {
+            color: white;
+        }
+
+        .title-image {
+            width: 50%;
+            height: 100%;
+        }
+
+        .title-image img {
+            height: 100%;
+            width: 70%;
+        }
+
+
+
+
+
+
+
+        /* header end */
+        /* sidebar strart */
+
+        .sidebar {
+
+            grid-column: 1/4;
+
+            display: flex;
+        }
+
+        .options {
+            width: 100%;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            gap: 10px;
+            background-color: #161616;
+            border-radius: 15px;
+        }
+
+        .match-button {
+            width: 80%;
+            height: 70px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 15px;
+            background-image: linear-gradient(#dba40b, #ebc763);
+        }
+
+        .group-button {
+            width: 80%;
+            height: 70px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .blog-button {
+            width: 80%;
+            height: 70px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 15px;
+
+        }
+
+        .blog-button:hover {
+            opacity: .75;
+        }
+
+        .match-button:hover {
+            opacity: .75;
+        }
+
+        .group-button:hover {
+            opacity: .75;
+        }
+
+        /* main start */
+        .main {
+            grid-column: 4/-1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 10px;
+            column-gap: 15px;
+        }
+
+        .blogs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            box-shadow: 7px 7px 7px grey;
+            border-radius: 15px;
+        }
+
+        .images {
+            display: flex;
+        }
+
+        .images img {
+            width: 100%;
+        }
+
+        /* footer start */
+        .footer {
+            grid-column: 1/-1;
+            background-color: #161616;
+
+            border-radius: 15px;
+
+        }
+
+        .footer h1 {
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .footer hr {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .footer h1:hover {
+            opacity: .5;
+        }
+
+
+        .list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .list li {
+            list-style: none;
+        }
+
+        .list li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .list li a:hover {
+            opacity: .5;
+        }
+
+        .social {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        #icon {
+            color: white;
+            opacity: .75;
+        }
+
+        #icon:hover {
+            opacity: .5;
+        }
+
+        /* respnsive start */
+        @media only screen and (max-width: 992px) {
+            .wreaper {
+                grid-template-rows: repeat(4, 1fr);
+            }
+
+            .sidebar {
+                grid-column: 1/-1;
+            }
+
+            .options {
+                flex-direction: row;
+                background-color: #ffff;
+            }
+
+            .match-button {
+                height: 70px;
+                background-image: -moz-linear-gradient(grey, white);
+            }
+
+            .group-button {
+                height: 70px;
+                background-image: -moz-linear-gradient(grey, white);
+
+            }
+
+            .blog-button {
+
+                height: 70px;
+            }
+
+            .main {
+                grid-template-columns: repeat(2, 1fr);
+                grid-column: 1/-1;
+            }
+
+            .footer hr {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            @media only screen and (max-width: 768px) {
+                .banner {
+                    flex-direction: column;
+                }
+
+                .card-info {
+                    width: 100%;
+                }
+
+                .title-image {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .main {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .footer hr {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+
+                .list {
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <section class="wreaper">
+        <!-- header star -->
+        <div class="header">
+            <div class="banner">
+                <div class="card-info">
+                    <div class="banner-title">
+                        <h1 class="great-header">The Greatest </h1>
+                        <h1>show on the </h1>
+                        <h1>earth</h1>
+                    </div>
+                    <div class="title-info">
+                        <p>The FIFA World Cup, often simply called the World Cup, is an international association
+                            football
+                            competition contested by the senior men's national teams of the members of the Fédération
+                            Internationale de Football Association (FIFA), the sport's global governing body.
+                        </p>
+                    </div>
+                    <div class="watch-button">
+                        <button class="live-button"><a href="#">Watch Live</a> <i class="fa-solid fa-greater-than"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="title-image">
+                    <img src="Banner Image.png" alt="">
+                </div>
+
+
+            </div>
+        </div>
+        <!-- side bar start -->
+
+        <div class="sidebar">
+            <div class="options">
+                <button class="match-button">Upcoming Match</button>
+                <button class="group-button">All Group</button>
+                <button class="blog-button">Blogs</button>
+
+            </div>
+        </div>
+        <!-- main start -->
+        <div class="main">
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="images">
+                    <img src="germany Flag.png" alt="flag of germany">
+                    <h1>VS</h1>
+                    <img src="Flag.png" alt="flag of france">
+                </div>
+                <div class="blog-title">
+                    <h3>Germany vs France</h3>
+                    <p>April 01, 2023, 1.00 AM</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- footer start -->
+        <div class="footer">
+
+            <h1>Goal</h1>
+            <hr>
+            <ul class="list">
+                <li><a href="">Contact Us</a> </li>
+                <li><a href="">Terms of Service</a> </li>
+                <li><a href="">Privacy Policy</a> </li>
+                <li><a href="">Privacy Settings</a></li>
+                <li><a href="">Goal App </a></li>
+                <li><a href="">Goal Live</a></li>
+
+            </ul>
+            <div class="social">
+                <div><i id="icon" class="fa-brands fa-facebook"></i></div>
+                <div><i id="icon" class="fa-brands fa-instagram"></i></div>
+                <div><i id="icon" class="fa-brands fa-youtube"></i></div>
+                <div><i id="icon" class="fa-brands fa-twitter"></i></div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
